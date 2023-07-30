@@ -3,10 +3,13 @@ import { Link } from "react-router-dom";
 import { UserContext } from "./UserContext";
 import icon from "../assets/Image/krish1.jpeg";
 // import icon from "../assets/Image/photo.png";
+// const MYSITE = "http://localhost:4000";
+
+const MYSITE = "http://k-bytes-server.vercel.app";
 const NavBar = () => {
   const { setUserInfo, userInfo } = useContext(UserContext);
   useEffect(() => {
-    fetch("http://localhost:4000/profile", {
+    fetch(MYSITE+"/profile", {
       credentials: "include",
     }).then((response) => {
       response.json().then((userInfo) => {
@@ -16,7 +19,7 @@ const NavBar = () => {
   }, []);
 
   function logout() {
-    fetch("http://localhost:4000/logout", {
+    fetch(MYSITE+"logout", {
       credentials: "include",
       method: "POST",
     });
