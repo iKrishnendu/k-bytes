@@ -5,7 +5,7 @@ import icon from "../assets/Image/krish1.jpeg";
 // import icon from "../assets/Image/photo.png";
 // const MYSITE = "http://localhost:4000";
 
-const MYSITE = "http://k-bytes-server.vercel.app";
+const MYSITE = "https://k-bytes-server.vercel.app";
 const NavBar = () => {
   const { setUserInfo, userInfo } = useContext(UserContext);
   useEffect(() => {
