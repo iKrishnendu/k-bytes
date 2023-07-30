@@ -12,7 +12,7 @@ const uploadMiddleware = multer({ dest: "uploads/" });
 const fs = require("fs");
 const { secret, MONGO_URI } = require("./config/keys");
 
-app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
+app.use(cors({ credentials: true, origin: "http://k-bytes.vercel.app" }));
 app.use(express.json());
 app.use(cookieParser());
 app.use("/uploads", express.static(__dirname + "/uploads"));
