@@ -11,6 +11,7 @@ const multer = require("multer");
 const uploadMiddleware = multer({ dest: "uploads/" });
 const fs = require("fs");
 const { secret, MONGO_URI } = require("./config/keys");
+const PORT = process.env.PORT || 4000;
 
 app.use(cors({ credentials: true, origin: "http://k-bytes.vercel.app" }));
 app.use(express.json());
@@ -149,4 +150,4 @@ if (process.env.NODE_ENV == "production") {
   });
 }
 
-app.listen(4000);
+app.listen(PORT);
