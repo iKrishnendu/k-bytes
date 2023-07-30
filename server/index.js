@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const { mongo, default: mongoose } = require("mongoose");
+const { mongoose } = require("mongoose");
 const User = require("./models/User");
 const Post = require("./models/Post");
 const app = express();
@@ -13,7 +13,7 @@ const fs = require("fs");
 const { secret, MONGO_URI } = require("./config/keys");
 const PORT = process.env.PORT || 4000;
 
-app.use(cors({ credentials: true, origin: "http://k-bytes.vercel.app" }));
+app.use(cors({ credentials: true, origin: "https://k-bytes.vercel.app" }));
 app.use(express.json());
 app.use(cookieParser());
 app.use("/uploads", express.static(__dirname + "/uploads"));
